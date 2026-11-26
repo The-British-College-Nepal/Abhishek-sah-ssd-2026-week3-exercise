@@ -2,8 +2,7 @@
 package stats;
 
 /**
- * The Stats class stores integer values and calculates
- * their maximum, minimum, total, average, and count.
+ * Stores integer values and calculates their statistics.
  *
  * @author Abhishek Sah
  * @version 1.0
@@ -14,10 +13,9 @@ public class Stats {
 	private int count;
 
 	/**
-	 * Creates a Stats object with the specified capacity.
+	 * Creates a Stats object with the specified array capacity.
 	 *
-	 * @param capacity the initial capacity of the array
-	 * @throws IllegalArgumentException if capacity is not positive
+	 * @param capacity initial array capacity
 	 */
 	public Stats(int capacity) {
 		if (capacity <= 0) {
@@ -29,9 +27,9 @@ public class Stats {
 	}
 
 	/**
-	 * Adds a new integer value to the array.
+	 * Adds a new value to the array.
 	 *
-	 * @param number the integer value to add
+	 * @param number value to add
 	 */
 	public void addValue(int number) {
 		if (count == numbers.length) {
@@ -47,9 +45,9 @@ public class Stats {
 	}
 
 	/**
-	 * Returns the largest stored value.
+	 * Returns the maximum value.
 	 *
-	 * @return the maximum value
+	 * @return largest stored value
 	 * @throws IllegalStateException if no values have been added
 	 */
 	public int getMax() {
@@ -69,9 +67,9 @@ public class Stats {
 	}
 
 	/**
-	 * Returns the smallest stored value.
+	 * Returns the minimum value.
 	 *
-	 * @return the minimum value
+	 * @return smallest stored value
 	 * @throws IllegalStateException if no values have been added
 	 */
 	public int getMin() {
@@ -91,9 +89,9 @@ public class Stats {
 	}
 
 	/**
-	 * Calculates the average of all stored values.
+	 * Calculates the average value.
 	 *
-	 * @return the average value
+	 * @return average of all stored values
 	 * @throws IllegalStateException if no values have been added
 	 */
 	public double getAverage() {
@@ -105,9 +103,9 @@ public class Stats {
 	}
 
 	/**
-	 * Calculates the sum of all stored values.
+	 * Calculates the total of all stored values.
 	 *
-	 * @return the total sum
+	 * @return sum of stored values
 	 */
 	public int getTotal() {
 		int total = 0;
@@ -120,9 +118,9 @@ public class Stats {
 	}
 
 	/**
-	 * Returns the number of values currently stored.
+	 * Returns the actual number of stored values.
 	 *
-	 * @return the actual number of added values
+	 * @return number of values added
 	 */
 	public int getCount() {
 		return this.count;
